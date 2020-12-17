@@ -1,4 +1,4 @@
 # Practice
-practice baekjoon algorithm using Java 
+baekjoon algorithm using Java 
 -- 
-basic algorithm
+basic algorithm 
