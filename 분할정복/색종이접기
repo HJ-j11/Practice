@@ -22,7 +22,7 @@ public class Paper_2630 {
 	}
 	static void cut(int n, int m, int k) {
 		for(int i=n; i<n+k; i++) {
-			for(int j=m; j<n+k; j++) {
+			for(int j=m; j<m+k; j++) {
 				if(arr[i][j]!=arr[j][i]) {
 					cut(n,m,k/2);
 					cut(n,m+k/2, k/2);
