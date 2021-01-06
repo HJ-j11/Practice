@@ -1,0 +1,60 @@
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class SLinkedList(object):
+    def __init__(self):
+        self.head = None
+        self.size = 0
+    
+    def size(self):
+        return self.size
+
+    def is_empty(self):
+        if self.size==0:
+            return True
+        else:
+            return False
+
+    def search(self,target):
+        return 
+
+    def insert_front(self, data):
+        nw_node = Node(data)
+        if self.is_empty():
+            self.head = nw_node
+        else:
+            nw_node.next = self.head.next
+            self.head.next = nw_node
+    #p is pointer
+    def insert_after(self, data, p):
+        nw_node = Node(data)
+        if p==self.size:
+            p.next = nw_node
+        else:
+            nw_node.next = p.next
+            p.next = nw_node
+
+    def delete_front(self):
+        if is_empty():
+            return None
+        else:
+            tmp_node =self.head.next
+            tmp_node.prev = self.head
+            self.head.next = tmp_node.next
+
+    def delete_after(self, p):
+        if p==self.size:
+            return None
+        else:
+            tmp_node = p.next
+            p.next = tmp_node.next
+
+    def print_list(self):
+        node = self.head
+        while node:
+            print(node)
+            node = node.next
+        
+
