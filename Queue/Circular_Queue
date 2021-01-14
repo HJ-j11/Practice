@@ -1,0 +1,60 @@
+import java.util.*;
+
+class Q {
+	int T[];
+	int front;
+	int rear;
+	int size;
+	
+	Q(int size) {
+		this.T = new int[size];
+		this.front = 0;
+		this.rear = -1;
+		this.size = size;
+	}
+	
+	boolean isEmpty() {
+		if(front > rear) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	boolean isFull() {
+		if(rear>=size-1) {
+			return true; 
+		} else {
+			return false;
+		}
+	}
+	
+	int peek() {
+		return T[front];
+	}
+	
+	int dequeue() {
+		int deque = peek();
+		this.front++;
+		return deque;
+	}
+	
+	void enqueue(int item) {
+		this.rear++;
+		T[rear] = item;
+	}
+}
+
+public class Practice_Queue {
+	public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+		Scanner sc = new Scanner(System.in);
+		int N = Integer.parseInt(sc.nextLine());
+		Q q = new Q(N);
+		q.enqueue(1);
+		q.enqueue(2);
+		q.enqueue(3);
+		q.enqueue(4);
+		System.out.println(q.peek());
+		sc.close();
+	}
+}
