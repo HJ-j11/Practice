@@ -1,0 +1,28 @@
+package baekjoon;
+
+import java.util.*;
+
+public class Triangle_1932 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int[][] arr = new int[N+1][N+1];
+		
+		for(int i=1; i<=N; i++) {
+			for(int j=1; j<=i; j++) {
+				arr[i][j] = sc.nextInt();
+				if(j==1) { 
+					arr[i][j] = arr[i-1][j] + arr[i][j];}
+				else if(j==i) {
+					arr[i][j] = arr[i-1][j-1] + arr[i][j];}
+				else { 
+					arr[i][j]= Math.max(arr[i-1][j-1], arr[i-1][j])+arr[i][j];
+				}
+			}
+		}
+		
+		sc.close();
+	}
+}
+
+-- 수정중 -- 
