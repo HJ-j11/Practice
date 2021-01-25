@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Balanced_4949_2 {
+	static String Solve(String s) {
+		Stack <Character> stack = new Stack<Character>();
+		int l, i;
+		l = s.length();
+		for (i=0; i<l; i++) {
+			char c = s.charAt(i);
+			if(c=='('||c=='[') {
+				stack.push(c);
+			} else if(c==')') {
+				if(stack.isEmpty()||stack.peek()!='(') {
+					return "no";
+				} else {
+					stack.pop();
+				}
+			} else if(c==']') {
+				if(stack.isEmpty()||stack.peek()!='[') {
+					return "no";
+				} else {
+					stack.pop();
+				}
+			}
+		}
+		if(stack.isEmpty()) {
+			return "yes";
+		} else {
+			return "no";
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String st;
+		while(true) {
+			st = sc.nextLine();
+			if(st.equals(".")) {
+				break;
+			}
+			System.out.println(Solve(st));
+		}
+		sc.close();
+	}
+}
