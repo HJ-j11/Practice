@@ -1,0 +1,26 @@
+-- 지금까지 생각한 아이디어--
+1. 입력받은 N과 M을 토대로 총 nPm 갯수의 줄이 출력 되어야 함.
+
+2. 백트래킹의 방식으로 모든 경우의 수 검토 (첫번째 정해진 수 -> 첫째 수를 제외하고 나머지 수 뽑기)
+
+---  코드 -- 
+package baekjoon;
+
+import java.util.*;
+
+public class N_M_15649 {
+	static void Answer(int n, int m) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int M = sc.nextInt();
+		Answer(N,M);
+		sc.close();
+	}
+
+}
+
