@@ -1,0 +1,65 @@
+package baekjoon;
+
+import java.io.*;
+import java.util.Stack;
+
+
+public class Stack_10828 {
+	static Stack <Integer> stack = new Stack<Integer>();
+	
+	static void push(int n) {
+		stack.push(n);
+	}
+	static int pop() {
+		if(empty()==1) {
+			return -1;
+		} else {
+			int num = stack.pop();
+			return num;
+		}
+	}
+	static int size() {
+		return 1;
+	}
+	static int empty() {
+		if(empty()==1){
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+	static int top() {
+		if(empty()==1) {
+			return -1;
+		} else {
+			int num = stack.peek();
+			return num;
+		}
+	}
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(bf.readLine());
+		for (int i=0; i<N; i++) {
+			String st = bf.readLine();
+			String[] token = st.split(" ");
+			switch(token[0]) {
+			case "push":
+				push(Integer.parseInt(token[1]));
+				break;
+			case "pop":
+				pop();
+				break;
+			case "empty":
+				empty();
+				break;
+			case "size":
+				size();
+				break;
+			case "top":
+				top();
+				break;
+			}
+		}
+	}
+}
